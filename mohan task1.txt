@@ -1,0 +1,62 @@
+//Write a JavaScript function to generate an array between two integers of 1 step length.
+
+//01:Input :
+//console.log(range(3, 7));
+//Expected Output:
+//[3,4, 5, 6, 7]
+
+var result=[];
+function range (a,b){
+  for (var i=a;i<=b; i++){
+   result.push(i); 
+  }
+  return(result)
+}
+console.log(range(3,7));
+
+
+//02:Input :
+//console.log(range(-4, 7));
+//Expected Output:
+//[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+
+
+var result=[];
+function range (a,b){
+  for (var i=a;i<=b; i++){
+   result.push(i); 
+  }
+  return(result)
+}
+console.log(range(-4,7));
+
+----------------------------------------------------------------------------------------------
+
+//Write a JavaScript program to find the most frequent item of an array.
+//Sample array: 
+//var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+
+//Sample Output: q ( 5 times )
+
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+
+var minocc=1;
+var count=0;
+var element;
+//taking each element from the array
+for(var i=0;i<arr1.length;i++){
+for(var k=i;k<arr1.length;k++){
+if(arr1[i]==arr1[k]){
+count++;
+if(minocc<count){
+minocc=count;
+element=arr1[i];
+}
+}
+}
+
+count=0;
+}
+
+console.log(element+" "+"("+minocc+" times)");
